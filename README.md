@@ -1,5 +1,7 @@
 # ansible-role-banner :triangular_flag_on_post: #
 
+[![Build Status](https://travis-ci.com/cisagov/ansible-role-banner.svg?branch=develop)](https://travis-ci.com/cisagov/ansible-role-banner)
+
 An Ansible role for installing the NCATS login banner.
 
 ## Requirements ##
