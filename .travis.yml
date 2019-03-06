@@ -1,9 +1,18 @@
 ---
-language: python
-services: docker
+dist: xenial
 
-install:
-  - pip install --upgrade pip setuptools molecule docker wheel
-
-script:
-  - molecule test
+matrix:
+  include:
+    - language: python
+      python: 3.7
+      services: docker
+      install:
+        - pip install --upgrade pip setuptools molecule docker wheel
+      script:
+        - yamllint .travis.yml
+        - molecule test
+    - language: ruby
+      install:
+        - gem install mdl
+      script:
+        - mdl .
