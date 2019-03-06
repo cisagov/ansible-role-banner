@@ -15,4 +15,4 @@ matrix:
       install:
         - gem install mdl
       script:
-        - mdl .
+        - mdl README.md CONTRIBUTING.md
