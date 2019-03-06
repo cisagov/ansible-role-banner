@@ -9,10 +9,10 @@ matrix:
       install:
         - pip install --upgrade pip setuptools molecule docker wheel
       script:
-        - yamllint .travis.yml
+        - find . -name "*.yml" -exec yamllint {} \;
         - molecule test
     - language: ruby
       install:
         - gem install mdl
       script:
-        - mdl README.md CONTRIBUTING.md
+        - find . -name "*.md" -and -not -name "LICENSE.md" -exec mdl {} \;
