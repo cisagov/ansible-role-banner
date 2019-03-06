@@ -1,4 +1,4 @@
-# ansible-role-banner :triangular_flag_on_post: #
+# ansible-role-banner #
 
 [![Build Status](https://travis-ci.com/cisagov/ansible-role-banner.svg?branch=develop)](https://travis-ci.com/cisagov/ansible-role-banner)
 
@@ -20,11 +20,13 @@ None.
 
 Here's how to use it in a playbook:
 
-    - hosts: all
-      become: yes
-      become_method: sudo
-      roles:
-         - banner
+```yaml
+- hosts: all
+  become: yes
+  become_method: sudo
+  roles:
+    - banner
+```
 
 ## License ##
 
@@ -41,4 +43,4 @@ with this waiver of copyright interest.
 
 ## Author Information ##
 
-Mark Feldhousen <make.feldhousen@beta.dhs.gov>
+Mark Feldhousen <mark.feldhousen@trio.dhs.gov>
