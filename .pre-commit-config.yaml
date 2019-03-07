@@ -1,5 +1,11 @@
 ---
 repos:
+  - repo: https://github.com/igorshubovych/markdownlint-cli
+    rev: v0.14.0
+    hooks:
+      - id: markdownlint
+        args:
+          - --ignore LICENSE.md
   - repo: https://github.com/adrienverge/yamllint
     rev: v1.15.0
     hooks:
