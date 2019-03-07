@@ -9,10 +9,7 @@ matrix:
       install:
         - pip install --upgrade -r requirements-test.txt
       script:
-        - yamllint .
-        - flake8
-        - find . -name "*.py" -exec pyupgrade {} \;
-        - black --check
+        - pre-commit run --all-files
         - molecule test
     - language: ruby
       install:
