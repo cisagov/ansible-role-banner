@@ -5,6 +5,8 @@ repos:
     hooks:
       - id: check-executables-have-shebangs
       - id: check-json
+      - id: check-merge-conflict
+      - id: check-xml
       - id: debug-statements
       - id: detect-aws-credentials
       - id: detect-private-key
@@ -16,6 +18,7 @@ repos:
       - id: pretty-format-json
         args:
           - --autofix
+      - id: requirements-txt-fixer
       - id: trailing-whitespace
         exclude: files/(issue|motd)
   - repo: https://github.com/igorshubovych/markdownlint-cli
