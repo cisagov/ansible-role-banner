@@ -26,5 +26,9 @@ repos:
     rev: 18.9b0
     hooks:
       - id: black
-        args:
-          - --line-length=80
+  - repo: https://github.com/antonbabenko/pre-commit-terraform.git
+    rev: v1.11.0
+    hooks:
+      - id: terraform_fmt
+      - id: terraform_validate_no_variables
+      - id: terraform_docs
