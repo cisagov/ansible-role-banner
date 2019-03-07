@@ -1,6 +1,6 @@
 ---
 repos:
-  - repo: git://github.com/pre-commit/pre-commit-hooks
+  - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v2.1.0
     hooks:
       - id: check-executables-have-shebangs
@@ -50,7 +50,7 @@ repos:
     hooks:
       - id: black
   - repo: https://github.com/ansible/ansible-lint.git
-    rev: v4.1.0
+    rev: v4.1.0a0
     hooks:
       - id: ansible-lint
         files: molecule/default/playbook.yml
@@ -60,3 +60,7 @@ repos:
       - id: terraform_fmt
       - id: terraform_validate_no_variables
       - id: terraform_docs
+  - repo: https://github.com/prettier/prettier
+    rev: 1.16.2
+    hooks:
+      - id: prettier
