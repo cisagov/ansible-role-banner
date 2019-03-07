@@ -1,0 +1,4 @@
+black
+docker # Needed for molecule to work correctly
+molecule
+pyupgrade
