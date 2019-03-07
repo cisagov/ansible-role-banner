@@ -28,6 +28,11 @@ Here's how to use it in a playbook:
     - banner
 ```
 
+## Contributing ##
+
+We welcome contributions!  Please see [here](CONTRIBUTING.md) for
+details.
+
 ## License ##
 
 This project is in the worldwide [public domain](LICENSE.md).
