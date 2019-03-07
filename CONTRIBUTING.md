@@ -36,24 +36,66 @@ If you want to make the changes yourself, or if you want to become a
 regular contributor, then you will want to set up
 [pre-commit](https://pre-commit.com/) on your local machine.  Once you
 do that, the CI checks will run locally before you even write your
-commit message.
+commit message.  This speeds up your development cycle considerably.
 
 ### Setting up pre-commit ###
 
 There are a few ways to do this, but we prefer to use
 [`pyenv`](https://github.com/pyenv/pyenv) and
 [`pyenv-virtualenv`](https://github.com/pyenv/pyenv-virtualenv) to
-create a Python virtual environment specific to this project.  Once
-`pyenv` and `pyenv-virtualenv` are installed on your system, you can
-create the virtual environment with these commands:
+create and manage a Python virtual environment specific to this
+project.
+
+#### Installing and using `pyenv` and `pyenv-virtualenv` ####
+
+On the Mac, installation is as simple as `brew pyenv pyenv-virtualenv`
+and adding this to your profile:
+
+```bash
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+```
+
+For Linux you will need to find a package for your particular distro,
+or follow the manual instructions
+[here](https://github.com/pyenv/pyenv#installation) and
+[here](https://github.com/pyenv/pyenv-virtualenv#installation).  Then
+you will need to add the same bit above to your profile.
+
+For a list of Python versions that are already installed and ready to
+use with `pyenv`, use the command `pyenv versions`.  To see a list of
+the Python versions available to be installed and used with `pyenv`
+use the command `pyenv install --list`.  You can read more
+[here](https://github.com/pyenv/pyenv/blob/master/COMMANDS.md) about
+the many things that `pyenv` can do.  See
+[here](https://github.com/pyenv/pyenv-virtualenv#usage) for the
+additional capabilities that pyenv-virtualenv adds to the `pyenv`
+command.
+
+#### Creating the Python virtual environment ####
+
+Once `pyenv` and `pyenv-virtualenv` are installed on your system, you
+can create and configure the Python virtual environment with these
+commands:
 
 ```bash
 cd ansible-role-banner
 pyenv virtualenv <python_version_to_use> ansible-role-banner
 pyenv local ansible-role-banner
 pip install -r requirements-dev.txt
+```
+
+#### Installing the pre-commit hook ####
+
+Now setting up pre-commit is as simple as:
+
+```bash
 pre-commit install
 ```
+
+At this point the pre-commit checks will run against any files that
+you attempt to commit.  If you want to run the checks against the
+entire repo, just execute `pre-commit run --all-files`.
 
 ## Public domain ##
 
