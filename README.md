@@ -1,4 +1,6 @@
-# ansible-role-banner :triangular_flag_on_post: #
+# ansible-role-banner #
+
+[![Build Status](https://travis-ci.com/cisagov/ansible-role-banner.svg?branch=develop)](https://travis-ci.com/cisagov/ansible-role-banner)
 
 An Ansible role for installing the NCATS login banner.
 
@@ -18,11 +20,18 @@ None.
 
 Here's how to use it in a playbook:
 
-    - hosts: all
-      become: yes
-      become_method: sudo
-      roles:
-         - banner
+```yaml
+- hosts: all
+  become: yes
+  become_method: sudo
+  roles:
+    - banner
+```
+
+## Contributing ##
+
+We welcome contributions!  Please see [here](CONTRIBUTING.md) for
+details.
 
 ## License ##
 
@@ -39,4 +48,4 @@ with this waiver of copyright interest.
 
 ## Author Information ##
 
-Mark Feldhousen <make.feldhousen@beta.dhs.gov>
+Mark Feldhousen - <mark.feldhousen@trio.dhs.gov>
