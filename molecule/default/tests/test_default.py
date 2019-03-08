@@ -18,7 +18,7 @@ def test_packages(host, pkg):
 @pytest.mark.parametrize(
     "file,contents",
     [
-        ("/etc/motd", "|.   '|'   ..|'''.|     |     |''||''|  .|'''.|"),
+        ("/etc/motd", "CYBER + INFRASTRUCTURE"),
         # Yes, the two spaces after 'information' are really intentional.
         # See files/issue.
         ("/etc/issue", "U.S. Government information  system"),
