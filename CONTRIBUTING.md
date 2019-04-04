@@ -15,8 +15,8 @@ Before contributing, we encourage you to read our CONTRIBUTING policy
 
 If you want to report a bug or request a new feature, the most direct
 method is to [create an
-issue](https://github.com/cisagov/ansible-role-banner/issues) in this
-repository.  We recommend that you first search through existing
+issue](https://github.com/cisagov/ansible-role-banner/issues) in
+this repository.  We recommend that you first search through existing
 issues (both open and closed) to check if your particular issue has
 already been reported.  If it has then you might want to add a comment
 to the existing issue.  If it hasn't then feel free to create a new
@@ -56,11 +56,10 @@ eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 ```
 
-For Linux you will need to find a package for your particular distro,
-or follow the manual instructions
-[here](https://github.com/pyenv/pyenv#installation) and
-[here](https://github.com/pyenv/pyenv-virtualenv#installation).  Then
-you will need to add the same bit above to your profile.
+For Linux (or on the Mac, if you don't want to use `brew`) you can use
+[pyenv/pyenv-installer](https://github.com/pyenv/pyenv-installer) to
+install the necessary tools.  When you are finished you will need to
+add the same two lines above to your profile.
 
 For a list of Python versions that are already installed and ready to
 use with `pyenv`, use the command `pyenv versions`.  To see a list of
