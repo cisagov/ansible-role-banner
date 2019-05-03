@@ -1,3 +1,5 @@
+"""Module containing the tests for the default scenario."""
+
 import os
 import pytest
 
@@ -10,6 +12,7 @@ testinfra_hosts = testinfra.utils.ansible_runner.AnsibleRunner(
 
 @pytest.mark.parametrize("pkg", ["openssh-server"])
 def test_packages(host, pkg):
+    """Test that the appropriate packages were installed."""
     package = host.package(pkg)
 
     assert package.is_installed
@@ -26,6 +29,7 @@ def test_packages(host, pkg):
     ],
 )
 def test_files_exist(host, file, contents):
+    """Test that config files were modified as expected."""
     f = host.file(file)
 
     assert f.exists
