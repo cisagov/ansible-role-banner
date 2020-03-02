@@ -22,6 +22,8 @@ galaxy_info:
         # - 30
         - 31
   galaxy_tags:
-    - skeleton
+    - issue
+    - motd
+    - ssh
 
 dependencies: []
