@@ -1,7 +1,7 @@
 ---
 galaxy_info:
   author: Mark Feldhousen
-  description: Install NCATS login banner
+  description: Install CISA login banner
   company: CISA Cyber Assessments
   license: CC0
   min_ansible_version: 2.0
