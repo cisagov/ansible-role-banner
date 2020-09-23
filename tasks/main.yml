@@ -10,11 +10,13 @@
   copy:
     src: motd
     dest: /etc/motd
+    mode: 0644
 
 - name: Install issue file
   copy:
     src: issue
     dest: /etc/issue
+    mode: 0644
 
 - name: Enable banner in sshd
   lineinfile:
