@@ -3,6 +3,10 @@ galaxy_info:
   author: Mark Feldhousen
   description: Install CISA login banner
   company: CISA Cyber Assessments
+  galaxy_tags:
+    - issue
+    - motd
+    - ssh
   license: CC0
   min_ansible_version: 2.0
   platforms:
@@ -13,20 +17,18 @@ galaxy_info:
       versions:
         - stretch
         - buster
-        # Kali linux isn't an option here, but it is based on Debian
-        # testing
+        # Kali linux isn't an option here, but it is based on
+        # Debian Testing:
+        # https://www.kali.org/docs/policy/kali-linux-relationship-with-debian
         - bullseye
     - name: Fedora
       versions:
-        - 29
-        # Ansible currently insists on installing python2-dnf, which
-        # does not exist in Fedora 30.  Until that is resolved, we
-        # can't use Fedora 30.
-        # - 30
-        - 31
-  galaxy_tags:
-    - issue
-    - motd
-    - ssh
+        - 32
+        - 33
+    - name: Ubuntu
+      versions:
+        - bionic
+        - xenial
+  role_name: banner
 
 dependencies: []
