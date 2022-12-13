@@ -1,8 +1,7 @@
 # ansible-role-banner #
 
 [![GitHub Build Status](https://github.com/cisagov/ansible-role-banner/workflows/build/badge.svg)](https://github.com/cisagov/ansible-role-banner/actions)
-[![Total alerts](https://img.shields.io/lgtm/alerts/g/cisagov/ansible-role-banner.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/cisagov/ansible-role-banner/alerts/)
-[![Language grade: Python](https://img.shields.io/lgtm/grade/python/g/cisagov/ansible-role-banner.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/cisagov/ansible-role-banner/context:python)
+[![CodeQL](https://github.com/cisagov/ansible-role-banner/workflows/CodeQL/badge.svg)](https://github.com/cisagov/ansible-role-banner/actions/workflows/codeql-analysis.yml)
 
 An Ansible role for installing the CISA login banner.
 
@@ -33,8 +32,10 @@ Here's how to use it in a playbook:
 - hosts: all
   become: yes
   become_method: sudo
-  roles:
-    - banner
+  tasks:
+    - name: Install CISA login banner
+      ansible.builtin.include_role:
+        name: banner
 ```
 
 ## Contributing ##
