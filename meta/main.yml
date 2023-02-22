@@ -1,8 +1,9 @@
 ---
+dependencies: []
 galaxy_info:
   author: Mark Feldhousen
-  description: Install CISA login banner
   company: CISA Cyber Assessments
+  description: Install CISA login banner
   galaxy_tags:
     - issue
     - motd
@@ -30,7 +31,6 @@ galaxy_info:
         - bookworm
     - name: Fedora
       versions:
-        - "35"
         - "36"
         - "37"
     - name: Ubuntu
@@ -39,5 +39,3 @@ galaxy_info:
         - focal
         - jammy
   role_name: banner
-
-dependencies: []
