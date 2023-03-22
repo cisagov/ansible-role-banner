@@ -7,20 +7,20 @@
 
 - name: Install motd file
   ansible.builtin.copy:
-    src: motd
     dest: /etc/motd
     mode: 0644
+    src: motd
 
 - name: Install issue file
   ansible.builtin.copy:
-    src: issue
     dest: /etc/issue
     mode: 0644
+    src: issue
 
 - name: Enable banner in sshd
   ansible.builtin.lineinfile:
+    backrefs: yes
     dest: /etc/ssh/sshd_config
     line: "Banner /etc/issue"
     regexp: "^.?Banner"
     state: present
-    backrefs: yes
