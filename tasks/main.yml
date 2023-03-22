@@ -2,23 +2,23 @@
 # This is already installed on the AMIs we use, but not on the Docker
 # images we use for our molecule tests
 - name: Install openssh-server
-  package:
+  ansible.builtin.package:
     name: openssh-server
 
 - name: Install motd file
-  copy:
+  ansible.builtin.copy:
     src: motd
     dest: /etc/motd
     mode: 0644
 
 - name: Install issue file
-  copy:
+  ansible.builtin.copy:
     src: issue
     dest: /etc/issue
     mode: 0644
 
 - name: Enable banner in sshd
-  lineinfile:
+  ansible.builtin.lineinfile:
     dest: /etc/ssh/sshd_config
     line: "Banner /etc/issue"
     regexp: "^.?Banner"
