@@ -1,3 +1,14 @@
 ---
 - name: Import upgrade playbook
   ansible.builtin.import_playbook: upgrade.yml
+
+# This is already installed on the AMIs we use, but not on the Docker
+# images we use for our molecule tests
+- hosts: all
+  name: Ensure that sshd is installed
+  become: yes
+  become_method: sudo
+  tasks:
+    - name: Install openssh-server
+      ansible.builtin.package:
+        name: openssh-server
