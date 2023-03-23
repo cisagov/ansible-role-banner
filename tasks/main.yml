@@ -1,6 +1,5 @@
 ---
-# This is already installed on the AMIs we use, but not on the Docker
-# images we use for our molecule tests
+# There is no point installing the banner unless sshd is present.
 - name: Install openssh-server
   ansible.builtin.package:
     name: openssh-server
