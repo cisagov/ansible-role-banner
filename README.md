@@ -3,9 +3,11 @@
 [![GitHub Build Status](https://github.com/cisagov/ansible-role-banner/workflows/build/badge.svg)](https://github.com/cisagov/ansible-role-banner/actions)
 [![CodeQL](https://github.com/cisagov/ansible-role-banner/workflows/CodeQL/badge.svg)](https://github.com/cisagov/ansible-role-banner/actions/workflows/codeql-analysis.yml)
 
-An Ansible role for installing the CISA login banner for the ssh
-server.  Note that [OpenSSH](https://www.openssh.com/) is installed as
-a dependency.
+An Ansible role for installing the CISA login banner for the SSH
+server.
+
+> **Note**
+> [OpenSSH](https://www.openssh.com/) is installed as a dependency.
 
 ## Requirements ##
 
