@@ -1,27 +1,25 @@
-# tasks file for banner
-
-# This is already installed on the AMIs we use, but not on the Docker
-# images we use for our molecule tests
+---
+# There is no point installing the banner unless sshd is present.
 - name: Install openssh-server
-  package:
+  ansible.builtin.package:
     name: openssh-server
 
 - name: Install motd file
-  copy:
-    src: motd
+  ansible.builtin.copy:
     dest: /etc/motd
     mode: 0644
+    src: motd
 
 - name: Install issue file
-  copy:
-    src: issue
+  ansible.builtin.copy:
     dest: /etc/issue
     mode: 0644
+    src: issue
 
 - name: Enable banner in sshd
-  lineinfile:
+  ansible.builtin.lineinfile:
+    backrefs: yes
     dest: /etc/ssh/sshd_config
     line: "Banner /etc/issue"
     regexp: "^.?Banner"
     state: present
-    backrefs: yes
