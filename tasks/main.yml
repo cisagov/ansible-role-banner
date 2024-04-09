@@ -18,7 +18,7 @@
 
 - name: Enable banner in sshd
   ansible.builtin.lineinfile:
-    backrefs: yes
+    backrefs: true
     dest: /etc/ssh/sshd_config
     line: "Banner /etc/issue"
     regexp: "^.?Banner"
