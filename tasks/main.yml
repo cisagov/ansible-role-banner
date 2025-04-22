@@ -7,13 +7,13 @@
 - name: Install motd file
   ansible.builtin.copy:
     dest: /etc/motd
-    mode: 0644
+    mode: u=rw,g=r,o=r
     src: motd
 
 - name: Install issue file
   ansible.builtin.copy:
     dest: /etc/issue
-    mode: 0644
+    mode: u=rw,g=r,o=r
     src: issue
 
 - name: Enable banner in sshd
