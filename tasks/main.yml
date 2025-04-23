@@ -7,19 +7,22 @@
 - name: Install motd file
   ansible.builtin.copy:
     dest: /etc/motd
-    mode: 0644
+    mode: u=rw,g=r,o=r
     src: motd
 
 - name: Install issue file
   ansible.builtin.copy:
     dest: /etc/issue
-    mode: 0644
+    mode: u=rw,g=r,o=r
     src: issue
 
 - name: Enable banner in sshd
   ansible.builtin.lineinfile:
     backrefs: true
     dest: /etc/ssh/sshd_config
-    line: "Banner /etc/issue"
-    regexp: "^.?Banner"
+    line: Banner /etc/issue
+    # We want to use quotes here to avoid having to escape, e.g., the
+    # question mark that is a special character for YAML.
+    # yamllint disable-line rule:quoted-strings
+    regexp: '^.?Banner'
     state: present
