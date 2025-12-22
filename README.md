@@ -1,6 +1,7 @@
 # ansible-role-banner #
 
 [![GitHub Build Status](https://github.com/cisagov/ansible-role-banner/workflows/build/badge.svg)](https://github.com/cisagov/ansible-role-banner/actions)
+[![License](https://img.shields.io/github/license/cisagov/ansible-role-banner)](https://spdx.org/licenses/)
 [![CodeQL](https://github.com/cisagov/ansible-role-banner/workflows/CodeQL/badge.svg)](https://github.com/cisagov/ansible-role-banner/actions/workflows/codeql-analysis.yml)
 
 An Ansible role for installing the CISA login banner for the SSH
